@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Luis Solsol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-color: #1f2937; /* Gris oscuro / casi negro */
+            --secondary-color: #3b82f6; /* Azul brillante */
+            --accent-color: #10b981; /* Verde Turquesa (Emerald) */
+        }
+        .text-primary { color: var(--primary-color); }
+        .bg-primary { background-color: var(--primary-color); }
+        .text-secondary { color: var(--secondary-color); }
+        .bg-secondary { background-color: var(--secondary-color); }
+        .text-accent { color: var(--accent-color); }
+        .bg-accent { background-color: var(--accent-color); }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <header class="sticky top-0 z-50 bg-primary shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-white hover:text-accent transition duration-300">
+                Luis Solsol Dev
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-white hover:text-accent font-medium transition duration-300">Inicio</a>
+                <a href="#sobre-mi" class="text-white hover:text-accent font-medium transition duration-300">Sobre Mí</a>
+                <a href="#proyectos" class="text-white hover:text-accent font-medium transition duration-300">Proyectos</a>
+                <a href="#contacto" class="text-white hover:text-accent font-medium transition duration-300">Contacto</a>
+            </div>
+            <button id="menu-button" class="md:hidden text-white hover:text-accent transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-primary px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent">Inicio</a>
+            <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent">Sobre Mí</a>
+            <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent">Proyectos</a>
+            <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent">Contacto</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative bg-white py-16 md:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight text-primary">
+                    Hola, Soy un <span class="text-secondary">Desarrollador de Sistemas</span>
+                </h1>
+                <p class="mt-4 text-xl text-gray-600">
+                    Estudiante de Ingeniería de Software con pasión por construir soluciones robustas y eficientes.
+                </p>
+                <div class="mt-8 space-x-4">
+                    <a href="#proyectos" class="inline-block px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-accent hover:bg-emerald-600 transition duration-300 shadow-lg transform hover:scale-105">
+                        Ver Proyectos
+                    </a>
+                    <a href="#contacto" class="inline-block px-8 py-3 border-2 border-primary text-base font-medium rounded-lg text-primary hover:bg-primary hover:text-white transition duration-300 transform hover:scale-105">
+                        Contáctame
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="bg-gray-100 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-extrabold text-primary mb-4">Sobre Mí & Mis Habilidades</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Actualmente estoy cursando la carrera de Ingeniería de Sistemas en la Universidad César Vallejo y me especializo en el ciclo de vida completo del desarrollo de software.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-secondary">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Lenguajes de Programación</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-secondary">★</span> JavaScript (ES6+)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-secondary">★</span> Java / C# (Orientación a Objetos)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-secondary">★</span> SQL (PostgreSQL, MySQL)
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-accent">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Tecnologías Web & Frameworks</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent">◇</span> React / Angular (Frontend)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent">◇</span> Node.js / Express (Backend)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-accent">◇</span> HTML5 & CSS3 (Tailwind CSS)
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border-t-4 border-secondary">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Herramientas y DevOps</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-secondary">⚙</span> Git & GitHub (Control de Versiones)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-secondary">⚙</span> Metodologías Ágiles (Scrum)
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-secondary">⚙</span> Google Cloud (Despliegue)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-primary mb-4">Mis Sistemas Destacados</h2>
+                <p class="text-lg text-gray-600">
+                    Proyectos desarrollados durante mi formación universitaria y tiempo libre.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden border-b-4 border-secondary hover:shadow-3xl transition duration-300 project-item flex flex-col h-full">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3 text-secondary">
+                             <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <h3 class="text-xl font-bold text-primary">Intranet Escolar con Biometría</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Plataforma integral para gestión académica (notas, tareas, matrículas). Incluye módulo de asistencia automática conectado a cámaras de seguridad, utilizando reconocimiento facial para validar la presencia de los estudiantes en el aula.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full font-medium">PHP</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full font-medium">Python</span> 
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full font-medium">JavaScript/SQL</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Reconocimiento Facial</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 border-t flex justify-end space-x-3">
+                        <a href="https://github.com/Cochayuyo69/asistencia_cam" target="_blank" class="text-sm font-medium text-secondary hover:text-blue-700">
+                            Ver Código (GitHub)
+                        </a>
+                        <button 
+                            data-project="intranet-escolar" 
+                            data-images="img/sistema_escolar_1.png,img/sistema_escolar_2.png,img/sistema_escolar_3.png"
+                            class="ver-sistema-btn text-sm font-medium text-accent hover:text-emerald-600"
+                        >
+                            Ver Sistema
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden border-b-4 border-accent hover:shadow-3xl transition duration-300 project-item flex flex-col h-full">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3 text-accent">
+                             <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <h3 class="text-xl font-bold text-primary">WAKEY - Aplicación de Productividad</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Aplicación enfocada en la gestión de tiempo y el descanso en los transportes públicos. Incluye funcionalidades de alarma inteligente y seguimiento de rutas.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full font-medium">Kotlin</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full font-medium">Android Studio</span> 
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 border-t flex justify-end space-x-3">
+                        <a href="https://github.com/Cochayuyo69/WAKEY" target="_blank" class="text-sm font-medium text-secondary hover:text-blue-700">
+                            Ver Código (GitHub)
+                        </a>
+                        <button 
+                            data-project="wakey" 
+                            data-images="img/wakey_1.jpg,img/wakey_2.jpg,img/wakey_3.jpg"
+                            class="ver-sistema-btn text-sm font-medium text-accent hover:text-emerald-600"
+                        >
+                            Ver Sistema
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-2xl overflow-hidden border-b-4 border-secondary hover:shadow-3xl transition duration-300 project-item flex flex-col h-full">
+                    <div class="p-6 flex-grow">
+                        <div class="flex items-center mb-3 text-secondary">
+                             <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.5-4h-2.5m-1 4a2 2 0 11-4 0 2 2 0 014 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 20h.01M17 20h.01M12 10a10 10 0 0110 10H2A10 10 0 0112 10z"></path></svg>
+                            <h3 class="text-xl font-bold text-primary">Egresoft</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Plataforma para gestionar capacitaciones dirigidas a egresados, permitiendo el seguimiento de su participación, registro de datos e identificación de interés en futuras capacitaciones. Implementado en Java y SQL, con reportes e integración con Power BI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-sm">
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Java</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full font-medium">SQL</span> 
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full font-medium">Power BI</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-4 border-t flex justify-end space-x-3">
+                        <a href="https://github.com/Cochayuyo69/egresadosUCV" target="_blank" class="text-sm font-medium text-secondary hover:text-blue-700">
+                            Ver Código (GitHub)
+                        </a>
+                        <button 
+                            data-project="egresoft" 
+                            data-images="img/egresoft_1.png,img/egresoft_2.png"
+                            class="ver-sistema-btn text-sm font-medium text-accent hover:text-emerald-600"
+                        >
+                            Ver Sistema
+                        </button>
+                    </div>
+                </div>
+
+                </div>
+            
+            </div>
+    </section>
+
+    <section id="contacto" class="bg-white py-16 md:py-20 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-primary mb-4">Hablemos de tu Próximo Proyecto</h2>
+            <p class="text-lg text-gray-600 mb-10">
+                Siempre estoy abierto a oportunidades de colaboración, prácticas o proyectos desafiantes.
+            </p>
+
+            <div class="flex flex-col md:flex-row flex-wrap justify-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="p-4 bg-gray-100 rounded-xl shadow-lg flex items-center hover:bg-gray-200 transition duration-300">
+                    <span class="text-secondary mr-3 text-2xl">📧</span>
+                    <div>
+                        <p class="text-sm text-gray-500">Correo Electrónico</p>
+                        <a href="mailto:solsolromerol@gmail.com" class="text-lg font-medium text-primary hover:text-secondary transition duration-300">
+                            solsolromerol@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-gray-100 rounded-xl shadow-lg flex items-center hover:bg-gray-200 transition duration-300">
+                    <span class="text-secondary mr-3 text-2xl">🔗</span>
+                    <div>
+                        <p class="text-sm text-gray-500">LinkedIn</p>
+                        <a 
+                            href="https://www.linkedin.com/in/luis-antonio-solsol-romero" 
+                            target="_blank" class="text-lg font-medium text-primary hover:text-secondary transition duration-300"
+                        >
+                            Luis Antonio Solsol Romero
+                        </a>
+                    </div>
+                </div>
+
+                <div class="p-4 bg-gray-100 rounded-xl shadow-lg flex items-center hover:bg-gray-200 transition duration-300">
+                    <span class="text-secondary mr-3 text-2xl">📞</span>
+                    <div>
+                        <p class="text-sm text-gray-500">WhatsApp</p>
+                        <a href="https://wa.me/51912426667" target="_blank" class="text-lg font-medium text-primary hover:text-secondary transition duration-300">
+                            912426667
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Luis Antonio Solsol Romero</p>
+            <p class="mt-2 text-gray-400"> Portafolio de Desarrollador</p>
+        </div>
+    </footer>
+
+    <div id="image-viewer-modal" class="fixed inset-0 bg-black bg-opacity-75 z-[99] hidden flex items-center justify-center p-4" onclick="closeImageViewer()">
+        <div class="bg-white rounded-lg p-6 max-w-4xl w-full mx-auto overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()"> 
+            <div class="flex justify-between items-start border-b pb-3 mb-4 sticky top-0 bg-white">
+                <h3 id="modal-title" class="text-2xl font-bold text-primary">Visualizador del Sistema</h3>
+                <button onclick="closeImageViewer()" class="text-gray-400 hover:text-gray-600 transition duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <div id="modal-content-placeholder">
+                <div class="min-h-[200px] flex flex-col items-center justify-center text-center p-8 bg-gray-100 rounded-lg">
+                    <p class="text-gray-600 text-lg">
+                        Cargando...
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-4 text-right">
+                <button onclick="closeImageViewer()" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-gray-700 transition duration-300">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variable global para mantener el estado del carrusel
+        let currentCarouselState = {
+            paths: [],
+            index: 0
+        };
+
+        // Función para actualizar los elementos DOM del carrusel (imagen visible, botones y contador)
+        window.updateCarousel = () => {
+            const { paths, index } = currentCarouselState;
+            const total = paths.length;
+
+            if (total === 0) return;
+
+            const images = document.querySelectorAll('#carousel-images-container img');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const currentSlideSpan = document.getElementById('current-slide');
+
+            // 1. Ocultar todas las imágenes y mostrar solo la actual
+            images.forEach((img, i) => {
+                img.classList.add('hidden');
+            });
+            if (images[index]) {
+                images[index].classList.remove('hidden');
+            }
+
+            // 2. Actualizar contador
+            if (currentSlideSpan) {
+                currentSlideSpan.textContent = index + 1;
+            }
+
+            // 3. Actualizar estado de botones (deshabilitar en los extremos)
+            if (prevBtn) {
+                prevBtn.disabled = index === 0;
+            }
+            if (nextBtn) {
+                nextBtn.disabled = index === total - 1 || total === 1; 
+            }
+        };
+
+        // Función para ir a la imagen anterior
+        window.prevImage = () => {
+            if (currentCarouselState.index > 0) {
+                currentCarouselState.index--;
+                updateCarousel();
+            }
+        };
+
+        // Función para ir a la imagen siguiente
+        window.nextImage = () => {
+            if (currentCarouselState.index < currentCarouselState.paths.length - 1) {
+                currentCarouselState.index++;
+                updateCarousel();
+            }
+        };
+
+        // Función que genera el HTML del carrusel
+        window.generateImageHTML = (imagePaths) => {
+            if (imagePaths.length === 0 || (imagePaths.length === 1 && imagePaths[0] === "")) {
+                // HTML de fallback si no hay imágenes o la cadena está vacía/mal formada
+                return `
+                    <div class="min-h-[200px] flex flex-col items-center justify-center text-center p-8 bg-gray-100 rounded-lg">
+                        <p class="text-gray-600 text-lg">
+                            Actualmente no hay capturas disponibles para este sistema.
+                        </p>
+                        <p class="text-sm text-gray-400 mt-2">
+                            Asegúrate de que las rutas en 'data-images' sean correctas.
+                        </p>
+                    </div>
+                `;
+            }
+
+            // Estructura del Carrusel
+            let htmlContent = `
+                <div class="relative flex items-center justify-center p-4 bg-gray-100 rounded-lg">
+                    <button id="prev-btn" onclick="prevImage()" class="absolute left-0 z-20 p-2 m-2 bg-gray-800 text-white rounded-full opacity-70 hover:opacity-100 transition duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-md">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+
+                    <div id="carousel-images-container" class="w-full flex justify-center items-center max-h-[70vh] overflow-hidden">
+            `;
+
+            imagePaths.forEach((path, index) => {
+                // Genera una imagen, oculta por defecto excepto la primera (índice 0)
+                const isHidden = index !== 0 ? 'hidden' : '';
+                htmlContent += `
+                    <img 
+                        src="${path.trim()}" 
+                        alt="Captura del sistema ${index + 1}" 
+                        class="w-auto max-w-full max-h-[60vh] rounded-lg shadow-xl border border-gray-300 transition-opacity duration-300 ${isHidden}" 
+                    />
+                `;
+            });
+
+            htmlContent += `
+                    </div>
+
+                    <button id="next-btn" onclick="nextImage()" class="absolute right-0 z-20 p-2 m-2 bg-gray-800 text-white rounded-full opacity-70 hover:opacity-100 transition duration-300 disabled:opacity-30 disabled:cursor-not-allowed shadow-md">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-3">Imagen <span id="current-slide">1</span> de ${imagePaths.length}</p>
+            `;
+            
+            return htmlContent;
+        }
+
+        // Función principal para abrir el modal
+        window.openImageViewer = (projectTitle, imagePaths) => {
+            const modal = document.getElementById('image-viewer-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContentPlaceholder = document.getElementById('modal-content-placeholder');
+
+            // 1. Inicializar el estado del carrusel
+            currentCarouselState.paths = imagePaths;
+            currentCarouselState.index = 0;
+            
+            // 2. Establecer título e inyectar contenido
+            modalTitle.textContent = `Visualizador de ${projectTitle}`;
+            modalContentPlaceholder.innerHTML = generateImageHTML(imagePaths);
+            
+            // 3. Abrir modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; 
+
+            // 4. Actualizar el carrusel (esto establecerá el estado inicial de los botones y el contador)
+            if (imagePaths.length > 0) {
+                updateCarousel(); 
+            }
+        }
+
+        window.closeImageViewer = () => {
+            const modal = document.getElementById('image-viewer-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restaura el scroll de fondo
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica del Menú Móvil
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Asignar el evento a todos los botones 'Ver Sistema'
+            document.querySelectorAll('.ver-sistema-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const card = button.closest('.bg-white');
+                    const titleElement = card.querySelector('h3');
+                    const projectTitle = titleElement ? titleElement.textContent : 'Proyecto';
+                    
+                    // Obtener la lista de imágenes del atributo data-images
+                    const imageString = button.getAttribute('data-images') || '';
+                    const imagePaths = imageString.split(',').filter(path => path.trim() !== '');
+                    
+                    openImageViewer(projectTitle, imagePaths);
+                });
+            });
+            
+            // El código para Cargar Más Proyectos fue eliminado ya que no hay proyectos ocultos.
+
+            // Cerrar modal al presionar ESC
+            document.addEventListener('keydown', (e) => {
+                const modal = document.getElementById('image-viewer-modal');
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeImageViewer();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
